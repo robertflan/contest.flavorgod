@@ -12,3 +12,5 @@ Route::get('profile', [
    'middleware' => 'auth',
    'uses' => 'UserController@showProfile'
 ]);
+Route::resource('my','MyController');
+Route::controller('test','ImplicitController');
