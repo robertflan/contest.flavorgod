@@ -8,3 +8,7 @@ Route::get('ID/{id}',function($id){
 Route::get('/user/{name?}',function($name = 'Virat'){
    echo "Name: ".$name;
 });
+Route::get('profile', [
+   'middleware' => 'auth',
+   'uses' => 'UserController@showProfile'
+]);
